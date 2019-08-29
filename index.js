@@ -19,7 +19,8 @@ app.get('/api', function(req, res) {
 app.get('/', function(req, res) {
     res.redirect('/api/gladiators')
 })
-app.set("port", process.env.PORT || 8080);
+// app.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT);
 
 app.listen(app.get("port"), () => {
     console.log(`${app.get("port")} works`);
