@@ -17,15 +17,19 @@ router.get("/name/:name", (req, res) => {
 })
 router.get("/status/:status", (req, res) => {
     let theName = req.params.status
-    Gladiator.find({ 'results.status': theName }).then(showName => res.json(showName))
+    Gladiator.find({ 'results.status': theName }).then(showStatus => res.json(showStatus))
 })
 router.get("/score/:score", (req, res) => {
     let theName = req.params.score
     Gladiator.find({ 'results.score': theName }).then(showName => res.json(showName))
 })
-router.get("/gid/:_id", (req, res) => {
-    let theName = req.params._id
-    Gladiator.find({ 'results._id': req.params._id }).then(showName => res.json(showName))
+// router.get("/gid/:_id", (req, res) => {
+//     let theName = req.params._id
+//     Gladiator.find({ 'results._id': req.params._id }).then(showName => res.json(showName))
+// })
+router.get("/id/:id", (req, res) => {
+    let theName = req.params.id
+    Gladiator.find({ 'results.id': theName }).then(showName => res.json(showName))
 })
 router.get("/gender/:gender", (req, res) => {
     let theName = req.params.gender
