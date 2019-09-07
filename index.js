@@ -13,9 +13,9 @@ app.use(cors())
 app.use('/api/user', userController)
 app.use('/api/gladiators', gladiatorsController)
 
-app.get('/api', function(req, res) {
-    res.redirect('/api/gladiators')
-})
+// app.get('/api', function(req, res) {
+//     res.redirect('/api/gladiators')
+// })
 app.get('/', function(req, res) {
     res.redirect('/api/gladiators')
 })
