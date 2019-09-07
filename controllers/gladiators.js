@@ -23,6 +23,10 @@ router.get("/score/:score", (req, res) => {
     let theName = req.params.score
     Gladiator.find({ 'results.score': theName }).then(showName => res.json(showName))
 })
+router.get("/id/:_id", (req, res) => {
+    let theName = req.params._id
+    Gladiator.find({ 'results._id': theName }).then(showName => res.json(showName))
+})
 router.get("/gender/:gender", (req, res) => {
     let theName = req.params.gender
     Gladiator.find({ 'results.gender': theName }).then(showName => res.json(showName))
